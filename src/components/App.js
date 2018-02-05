@@ -32,15 +32,22 @@ class App extends Component {
 
 	render() {
 		const videoSearch = _.debounce((term) => { this.videoSearch(term)}, 300);
+    const style = {
+      marginLeft: '1em',
+      marginBottom: '3em',
+      marginTop: '.5em'
+    }
 
 		return (
 			<div>
-				<h1>React Youtuber</h1>
+				<h4 className="brand" style={style}>React Youtuber</h4>
 				<SearchBar onSearchTermChange={videoSearch} />
-        <VideoDetail className="col col-lg-8" video={this.state.selectedVideo} />
+        <VideoDetail video={this.state.selectedVideo} />
         <VideoList
-					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
-					videos={this.state.videos} />
+          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+          videos={this.state.videos} />
+
+
 			</div>
 		);
 	}
