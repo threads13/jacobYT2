@@ -7,7 +7,9 @@ class SearchBar extends Component {
     this.state = { term: "" };
   }
 
+
   render() {
+
     return (
       <div className="search-bar">
         <input
