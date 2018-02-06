@@ -40,7 +40,7 @@ class App extends Component {
 
 		return (
 			<div>
-				<h4 className="brand" style={style}>React Youtuber</h4>
+				<h4 className="brand" style={style}>React YouTuber</h4>
 				<SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
